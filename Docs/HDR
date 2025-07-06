@@ -1,0 +1,38 @@
+vinthony/awesome-deep-hdr: A collection of deep learning based methods for HDR image synthesis
+
+トーンマップいろいろ - 下町のナポレオン
+
+HDRFlow
+
+
+複数の露光時間で撮影した画像を合成してHDR画像を作成する際に発生する**ハロー現象**は、主に**明暗差が大きい境界部分で不自然な白っぽい縁やにじみが現れる現象**です。
+
+### 原因
+- **画像合成アルゴリズムの特性**  
+  複数の露光画像を合成する際、明るい画像と暗い画像の情報を画素単位で切り出して合成しますが、明暗差が大きいエッジ部分では、各画像の露出の違いにより境界が不自然になりやすく、ハロー（にじみや白い縁）が生じます[4]。
+- **レタッチや現像時の補正**  
+  合成後にコントラストや明瞭度を強く調整すると、エッジ部分のハローがさらに強調されることがあります[5]。
+- **被写体の位置ズレ・動き**  
+  複数露光撮影時にカメラや被写体が動くと、画像の位置ズレ（ゴースト）とともにハローが発生しやすくなります[3]。
+
+### 対策
+- **合成アルゴリズムの改良**  
+  エッジ部分の重み付けやマスク処理を工夫し、境界が滑らかになるようにする。
+- **撮影時の工夫**  
+  三脚使用や手ブレ補正機能で位置ズレを防ぐ[3]。
+- **現像時の補正**  
+  ハローが目立つ場合は、現像ソフトやPhotoshopでハロー除去処理を行う[5]。
+
+**まとめ:**  
+複数露光画像の合成によるハロー現象は、**明暗差の大きなエッジ部分で合成や補正処理によって発生する白い縁やにじみ**です。これは合成アルゴリズムや撮影条件、現像処理が主な原因です[4][5][3]。
+
+情報源
+[1] 複雑な対象物の検査に伴うハロー効果と複雑なアライメント - News https://news.jai.com/blog/jp/halo-effect
+[2] ハレーションとは? 発生の原理や似た言葉、対策・防止方法について ... https://products.sint.co.jp/aisia-ad/blog/what-is-halation
+[3] 単一画像からの露出補正 - 大阪工業大学 研究支援社会連携推進課 https://www.research.oit.ac.jp/oitid/archive/2020/seeds/seeds-3545/
+[4] 露出時間を変化させた画像の組み合わせによる ダイナミックレンジ ... https://www.jstage.jst.go.jp/article/iieej/33/6/33_6_1088/_pdf
+[5] Photoshopで風景写真の白い滲み『ハロ』を除去する方法 https://www.photografan.com/basic-knowledge/remove-halo-photoshop-tutorial/
+[6] 撮影と画像処理＿3：背景光、ハロー、かすみ - アトリエ凡龍 https://atelier.bonryu.com/welcome/lensless/zpphoto-l/photo_processing/zp_taking5/
+[7] OM SYSTEMで撮影する 夜の風景写真のススメ｜礒村浩一 | ShaSha https://www.kitamura.jp/shasha/omsystem/night-landscape-20230831/
+[8] [PDF] 取扱説明書 https://download.omsystem.com/pages/inst/epl7/manual_epl7_JPN.pdf
+[9] [PDF] 使用説明書 基礎知識 1 準備 撮影 再生 共有 設定 付録 https://www.ricoh-imaging.co.jp/japan/support/man-pdf/KF_om_ja_web.pdf
